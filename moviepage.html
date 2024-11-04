@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEventBook - Movies</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #060606;
+            color: #5a5858;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlYXRlciUyMHNlYXRzfGVufDB8fDB8fHww) no-repeat center center;
+            background-size: cover;
+            opacity: 0.9; 
+            z-index: -1;
+        }
+
+        .movie-tile {
+            position: relative;
+            height: 400px;
+            margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            background-color: #221e1e;
+        }
+
+        .movie-tile img {
+            width: 100%;
+            height: 350px;
+            object-fit: fill;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding-top: 40px; 
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #afaf9a; 
+            padding-bottom: 20px;
+            font-size: 7.7rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .row > div {
+            padding: 30px;
+        }
+
+        .success-message {
+            color: #28a745; 
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Movie Tiles Section -->
+    <div class="container">
+        <h2>Now Showing</h2>
+        <div class="row">
+            <!-- Movie Tile 1 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://m.media-amazon.com/images/I/81ABv-XB8VL._AC_UF1000,1000_QL80_.jpg" alt="Movie Title 1">
+                    <a href="venom.html" class="btn btn btn-primary">Book Tickets</a>
+                </div>
+            </div>
+            <!-- Movie Tile 2 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/83/Singham_Returns_Poster.jpg" alt="Movie Title 2">
+                    <a href="singham.html" class="btn btn-primary mt-2">Book Tickets</a>
+                </div>
+            </div>
+            <!-- Movie Tile 3 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273b64f4ac4a25a5ce77ba13b04" alt="Movie Title 3">
+                    <a href="bhoolb.html" class="btn btn-primary mt-2">Book Tickets</a>
+                </div>
+            </div>
+            <!-- Movie Tile 4 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/p/q/x/medium-john-wick-movie-framed-poster-for-room-office-hollywood-original-imagn5h9czvhd8ca.jpeg?q=90&crop=false" alt="Movie Title 4">
+                    <div class="success-message" id="success-message-4"></div>
+                    <button class="btn btn-primary mt-2" onclick="bookTickets(4)">Confirm Booking</button>
+                </div>
+            </div>
+            <!-- Movie Tile 5 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://i.redd.it/what-has-happened-to-movie-posters-v0-veyma8wnnhb81.jpg?width=1000&format=pjpg&auto=webp&s=3e4a58e9e1277187cd5e42c0f10365c393d7da77" alt="Movie Title 5">
+                    <div class="success-message" id="success-message-5"></div>
+                    <button class="btn btn-primary mt-2" onclick="bookTickets(5)">Confirm Booking</button>
+                </div>
+            </div>
+            <!-- Movie Tile 6 -->
+            <div class="col-md-4">
+                <div class="movie-tile">
+                    <img src="https://www.postergully.com/cdn/shop/products/PG8_3_7a648f62-ed8a-4c75-8907-69efd904b069.jpg?v=1578633904" alt="Movie Title 6">
+                    <div class="success-message" id="success-message-6"></div>
+                    <button class="btn btn-primary mt-2" onclick="bookTickets(6)">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function bookTickets(index) {
+            const successMessage = document.getElementById(`success-message-${index}`);
+            successMessage.innerText = 'Booking confirmed successfully!'; 
+            successMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+

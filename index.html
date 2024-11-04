@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showstopper - Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://images7.alphacoders.com/133/1339451.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .tile {
+            height: 250px; 
+            display: flex; 
+            align-items: center; 
+            padding: 20px; 
+            margin-bottom: 30px; 
+            text-decoration: none; 
+            border-radius: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            justify-content: flex-start; 
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+
+        .tile img {
+            width: 350px; 
+            height: 190px; 
+            margin-right: 20px; 
+            border-radius: 10px; 
+        }
+
+        .movies-tile h2, .events-tile h2, .concerts-tile h2 {
+            font-size: 2.5em; 
+            font-weight: bold; 
+            color: #ffca28; 
+        }
+
+        .events-tile h2 {
+            color: #66bb6a; 
+        }
+
+        .concerts-tile h2 {
+            color: #42a5f5; 
+        }
+
+        .tile h2 {
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: left; 
+        }
+
+        .tile p {
+            margin: 5px 0 0; 
+            line-height: 1.5; 
+            text-align: left; 
+            font-size: 1.25em; 
+            color: rgb(54, 54, 54); 
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h2 {
+            font-size: 2.5em; 
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .about-us, .faq {
+            text-align: left;
+            color: #fff;
+            font-size: 1.2em; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">ShowStopper</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personallogin.html"><i class="fas fa-user-circle"></i> Account</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container text-center mt-5">
+        <a href="moviepage.html" class="tile movies-tile">
+            <img src="https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg" alt="Latest Movie">
+            <div>
+                <h2>Movies</h2>
+                <p>Discover the latest movies and blockbusters that you don't want to miss!</p>
+            </div>
+        </a>
+        
+        <a href="eventpage.html" class="tile events-tile">
+            <img src="https://childrenstheatreplays.com/images/aiw-harding1edit.jpg" alt="Upcoming Events">
+            <div>
+                <h2>Events</h2>
+                <p>Join us for amazing live events, shows, and unforgettable experiences!</p>
+            </div>
+        </a>
+
+        <a href="concertpage.html" class="tile concerts-tile">
+            <img src="https://c.ndtvimg.com/2024-09/tn5g1oag_coldplay-concert_625x300_27_September_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738" alt="Concerts">
+            <div>
+                <h2>Concerts</h2>
+                <p>Enjoy unforgettable concerts from top artists and bands.</p>
+            </div>
+        </a>
+    </div>
+
+    <section id="about-us" class="container mt-5 about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Showstopper, your ultimate destination for unforgettable entertainment experiences! We are passionate about connecting you with the best events, concerts, and movies, ensuring that every moment is a show-stopping experience.</p>
+        
+        <h3>Our Mission</h3>
+        <p>At Showstopper, our mission is to bring you closer to the world of live entertainment. Whether you're a fan of thrilling concerts, captivating movies, or engaging events, we strive to provide a seamless platform for discovering and booking tickets to the experiences you love.</p>
+
+        <h3>What We Offer</h3>
+        <ul>
+            <li><strong>Diverse Selection:</strong> From local shows to international acts, our curated listings cover a wide range of genres and events, ensuring there’s something for everyone.</li>
+            <li><strong>User-Friendly Experience:</strong> Our easy-to-navigate website makes finding and booking tickets a breeze. With just a few clicks, you can secure your spot at the next big event.</li>
+            <li><strong>Customer-Centric Service:</strong> We believe in providing exceptional service to our customers. Our dedicated support team is here to assist you with any queries or concerns, ensuring your experience is as enjoyable as the events themselves.</li>
+        </ul>
+
+        <h3>Join Us</h3>
+        <p>Join our community of entertainment enthusiasts and never miss out on a show again! Follow us on social media and subscribe to our newsletter for the latest updates, exclusive offers, and behind-the-scenes insights into the world of entertainment.</p>
+
+        <p>Thank you for choosing Showstopper! We can’t wait to help you create unforgettable memories.</p>
+    </section>
+
+    <section id="faq" class="container mt-5 faq">
+        <h2>FAQ</h2>
+        <p>Find answers to frequently asked questions about our services and booking process.</p>
+        <ul>
+            <li><strong>How can I book tickets?</strong> You can book tickets by navigating to the events or concerts page and selecting your desired show.</li>
+            <li><strong>What payment methods do you accept?</strong> We accept various payment methods including credit cards, debit cards, and PayPal.</li>
+            <li><strong>Can I cancel or modify my booking?</strong> Yes, you can cancel or modify your booking within a specified time frame. Please check our cancellation policy for details.</li>
+            <li><strong>How can I contact customer support?</strong> You can reach our customer support team via the contact form on our website or through our social media channels.</li>
+        </ul>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Showstopper. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+
+</body>
+</html>
